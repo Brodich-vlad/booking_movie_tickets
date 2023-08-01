@@ -1,0 +1,18 @@
+.stars_section{
+    padding: 2rem;
+}
+.stars_section__title{
+    width: 95%;
+    margin: 0 auto 2rem auto;
+    font-family: 'Inter',sans-serif;
+    font-size: 3rem;
+    line-height: 1
+}
+.stars_section__list{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}

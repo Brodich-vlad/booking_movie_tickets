@@ -1,0 +1,86 @@
+
+.carousel__item{
+    cursor: pointer;
+}
+.carousel__item-img{
+    min-height: 85vh;
+    max-height: 95vh;
+    object-fit: cover;
+    filter: brightness(0.3);
+}
+
+.carousel__info{
+    color: #fcf6f6;
+    width: 70%;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    left: 5%;
+}
+
+.carousel__info-title{
+    font-family: 'Kalam';
+    font-size: 4.5rem;
+    line-height: 1;
+    font-weight: 600;
+}
+.carousel__info-title_second{
+    font-size: 2.5rem;
+    color: gold;
+    line-height: .5;
+    font-weight: 500;
+}
+.carousel__info-text{
+    font-size: 2.5rem;
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 2%;
+    text-align: start;
+    margin-top: 2.5%;
+}
+
+.carousel__info-rating{
+    font-size: 2.8rem;
+  
+    display: flex;
+
+    align-items: center;
+}
+.carousel__info-rating img{
+    width: 3rem;
+    margin-right: .5rem;
+}
+
+@media (max-width: 760px) {
+
+
+    .carousel__info-title{
+        font-size: 3.5rem;
+    }
+    .carousel__info-title_second{
+        font-size: 2rem;
+    }
+
+    .carousel__info-text{
+        font-size: 1.6rem;
+    }
+
+    .carousel__info{
+        width: 85%;
+    }
+
+    .carousel__info-rating{
+        font-size: 2rem;
+    }
+    .carousel__info-rating img{
+        width: 2.2rem;
+    }
+}
+
+@media (max-width: 340px) {
+    .carousel__info-text {
+        display: none;
+    }
+}

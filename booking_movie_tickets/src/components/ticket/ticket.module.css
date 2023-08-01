@@ -1,0 +1,67 @@
+.ticket{
+    background-image: url('../../image/background/ticket_img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    color: rgb(8, 8, 8);
+    padding: 1.2rem  1rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-width: 25rem;
+    max-width: 35rem;
+    min-height: 12rem;
+    margin: .5rem;
+}
+
+.ticket_title{
+    font-family: 'Kalam';
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1;
+}
+.ticket_title_second{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.1;
+    color: rgb(236, 62, 62);
+}
+.ticket_text{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.ticket_text >span{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: rgb(5, 5, 131);
+}
+
+@media (max-width: 1020px){
+    .ticket{
+        min-width: 32rem;
+        max-width: 45rem;
+        width: 100%;
+        min-height: 16rem;
+    }
+}
+
+@media (max-width: 450px){
+    .ticket{
+        min-width: 22rem;
+        min-height: 12rem;
+    }
+    .ticket_title{
+        font-size: 1.3rem;
+    }
+    .ticket_title_second{
+        font-size: 1rem;
+    }
+    .ticket_text{
+        font-size: 1rem;
+    }
+    .ticket_text >span{
+        font-size: 1.2rem;
+    }
+}

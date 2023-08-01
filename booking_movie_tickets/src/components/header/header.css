@@ -1,0 +1,131 @@
+.header{
+    max-width: 144rem;
+    width: 100%;
+    margin: 0 auto;
+    background: #1A1F38;
+    color: white;
+    padding: .6rem;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+.header__wrapper{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__title_link{
+    color: white;
+    text-decoration: none;
+    transition: all .3s;
+}
+.header__title_link:hover,
+.header__title_link:focus{
+    color: white;
+    text-decoration: none;
+    transform: translateX(.3rem) translateY(.5rem);
+}
+
+.header__title{
+    font-family: 'Kalam', cursive;
+    font-size: 4.8rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+.header__title-logo{
+    display: inline-block;
+    font-size: 4.5rem;
+    font-weight: 400;
+    color: rgb(245, 76, 76);
+    transform: rotate(10deg) translateY(1rem);
+}
+.logo__yllow{
+    color: yellow;
+    margin-right: .4rem;
+}
+
+.logo__blue{
+    color: rgb(32, 103, 255);
+    margin-right: .4rem;
+}
+
+.logo__green{
+    color: rgb(5, 226, 5);
+    margin-right: .2rem;
+}
+
+.header__search{
+    min-width: 15rem;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #C4C4C4;
+    border-radius: .8rem;
+    padding: .5rem;
+}
+.header__search_input{
+    width: 85%;
+    font-size: 1.8rem;
+    line-height: 1;
+    font-weight: 500;
+    border: none;
+    background: none;
+    border-radius: .8rem;
+    padding: .5rem;
+}
+.header__search_btn{
+    width: 3rem;
+    height: 3rem;
+    background-image: url('../../image/svg/search.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 2%;
+}
+.header__close_btn{
+    color: rgb(69, 69, 69);
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-bottom: .4rem;
+}
+
+
+@media (max-width: 760px) {
+    .header__title{
+        font-size: 3.5rem;
+    }
+    
+    .header__title-logo{
+        font-size: 3.2rem;
+    }
+
+    .header__search_input{
+        padding: .3rem;
+        font-size: 1.5rem;
+    }
+    .header__search_btn{
+        width: 2.3rem;
+        height: 2.3rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .header{
+        padding: .8rem;
+    }
+    .header__wrapper{
+        width: 95%;
+        flex-direction: column;
+    }
+    .header__search{
+        width: 90%;
+    }
+}

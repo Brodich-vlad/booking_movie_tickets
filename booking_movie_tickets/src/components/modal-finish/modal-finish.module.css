@@ -1,0 +1,35 @@
+.modal{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 100%, rgba(0, 0, 0, 0.4)), url('../../image/background/modal.jpg');
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.modal_title{
+    font-family: 'Kalam', cursive;
+    font-size: 7rem;
+    font-weight: 700;
+    color: rgb(90, 194, 76);
+}
+
+@media (max-width: 600px){
+    .modal_title{
+        font-size: 5rem;
+    }
+}
+@media (max-width: 450px){
+    .modal_title{
+        font-size: 4rem;
+    }
+}

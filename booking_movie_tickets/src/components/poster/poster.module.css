@@ -1,0 +1,155 @@
+
+.item{
+    min-width: 25rem;
+    max-width: 25rem;
+    min-height: 35rem;
+    background: rgb(22, 22, 22);
+    border: 1px solid rgba(179, 178, 178, 0.333);
+    box-shadow: 0px 1px 3px rgba(255, 255, 255, 0.12), 0px 1px 1px rgba(255, 255, 255, 0.14), 0px 2px 1px rgba(255, 255, 255, 0.2);
+    border-radius: .4rem;
+    cursor: pointer;
+    transition: all .3s;
+    margin: 1%;
+    position: relative;
+}
+.item:hover{
+    box-shadow: 3px 4px 7px rgba(255, 255, 255, 0.24), 0px 1px 1px rgba(255, 255, 255, 0.30), 0px 2px 1px rgba(255, 255, 255, 0.4);
+    transform: translateY(-.2rem)translateX(-.2rem);
+}
+
+.item_img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 30rem;
+    object-fit:cover;
+    object-position: 70% 0;
+    border-radius: .3rem;
+}
+.item_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 8rem;
+    padding: .5rem .8rem;
+}
+.item_info_title{
+    font-size: 1.7rem;
+    font-family: 'Kalam';
+}
+
+.item_info_title_second{
+    background: rgba(0, 0, 0, 0.6);
+    padding: .2rem 1rem;
+    font-size: 1.8rem;
+    border-radius: .5rem;
+    font-weight: 600;
+    color: gold;
+    border: 1px solid gold;
+    bottom: 22%;
+    left: 1rem;
+    position: absolute;
+}
+.item_info_date{
+    font-size: 1rem;
+}
+.item_info_known{
+    font-size: 1.2rem;
+    line-height: 1.15;
+}
+
+.schedule{
+    width: 100%;
+    max-height: 2.5rem;
+    max-width: 8rem;
+    position: absolute;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.7);
+    padding: .5rem 1rem;
+
+    top: 0;
+    right: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 0 0 0 2rem ;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+
+
+.schedule:hover{
+    max-height: 30rem;
+    max-width: 80rem;
+}
+
+
+.schedule_title{
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+}
+.schedule_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.schedule_list_btn{
+    line-height: 1;
+    margin: .5rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+    padding: .4rem;
+    text-align: center;
+    opacity: .7;
+    transition: all .3s;
+}
+
+.schedule_list_btn span{
+    display: block;
+}
+.schedule_list_btn:focus,
+.schedule_list_btn:hover{
+    opacity: 1;
+}
+
+
+.schedule_btn{
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+    border-radius: .3rem;
+    color: white;
+    padding: .5rem .8rem;
+    margin: .5rem auto;
+    opacity: .7;
+    transition: all .3s;
+}
+
+.schedule_btn:disabled{
+    opacity: .3;
+    cursor: default;
+}
+.schedule_btn:not([disabled]):focus,
+.schedule_btn:not([disabled]):hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+@media (max-width: 850px) {
+    .item{
+        max-width: 35rem;
+    }
+}
+
+@media (max-width: 760px) {
+    .item{
+        max-width: 50rem;
+    }
+}
