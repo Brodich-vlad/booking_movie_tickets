@@ -22,7 +22,7 @@ export default function DropList(){
         callbackSetVisitsInfo({date:el, numPlaces:[]})
     }
 
-    //Функція створення календаря.
+    //Функція створення календаря. 
     const createListItem = (date, arr) =>{
         const todey = createDateStr(new Date())
         const arrTime = [];

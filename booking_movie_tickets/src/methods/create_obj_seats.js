@@ -1,12 +1,31 @@
+import {currentTime} from './current_time'
+import {createDateStr} from './calendar';
+
+
 // Повертае рандомне значення true / false.
-const randomBoolean = () =>{
+const randomBoolean = (i) =>{
     let num = Math.random()
-    return num > .3 ? true : false;
+    return num > i*1 ? true : false;
+}
+
+// індекс вільних місць в залежності від часу та дати.
+const indexFre = ({date,time}) =>{
+    const todey = createDateStr(new Date())
+    if(time - 2  <= currentTime() && todey === date){
+        return .4
+    }
+    else  if(time  > currentTime() && todey === date){
+        return .3
+    }
+    else return .1
 }
 
 
+
 // Обект зали нумерація місць.
-export  const createObjSeats = () =>{
+export  const createObjSeats = (visit) =>{
+
+    const ind = visit && indexFre(visit)
     const newArr = [];
     let cayntX = 1;
     let cayntY = 0;
@@ -29,7 +48,7 @@ export  const createObjSeats = () =>{
             id: i + 1,
             x:cayntX,
             y:cayntY,
-            fre:randomBoolean(),
+            fre:randomBoolean(ind),
             selected:false,
         }
         )

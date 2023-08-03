@@ -1,12 +1,14 @@
-
+// Картинки заглушки.
+import background from '../image/background/fon-kinolenta.jpg';
+import affiche from '../image/background/affiche.jpg'
 
 const randomIndexs = (num) =>{
     const schedule = [9,11,13,15,17,19,21,22];
     let length = schedule.length
-    let b = num.toFixed()/2
+    let b = num.toFixed()
     let arr = []
-    for (let i = 0; i < b; i++) {
-        let a = Math.floor(Math.random()* length)
+    for (let i = 0; i <= b; i++) {
+        let a = Math.floor(Math.random() * length)
         if(!arr.includes(schedule[a])){
             arr.push(schedule[a])
         }
@@ -19,7 +21,7 @@ const randomIndexs = (num) =>{
 
 
 const randomSchedule = (rating) =>{
-    let arr = randomIndexs(rating)
+    let arr = randomIndexs(rating/2.5)
     const newArr = arr.map((e)=>{
         return{
             time:e,
@@ -39,8 +41,8 @@ export function createNewData(data){
             info: overview,
             price:randomSchedule(vote_average),
             premiere: vote_average > 8  ? true : false,
-            image: poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}`: null ,
-            backdrop: backdrop_path ? `https://image.tmdb.org/t/p/original/${backdrop_path}`: null,
+            image: poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}`: affiche,
+            backdrop: backdrop_path ? `https://image.tmdb.org/t/p/original/${backdrop_path}`: background,
             rating: vote_average.toFixed(1), 
             date: release_date || first_air_date,
         }

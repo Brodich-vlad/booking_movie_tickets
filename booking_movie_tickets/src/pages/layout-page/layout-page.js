@@ -24,18 +24,19 @@ export default function LayoutPage() {
     
     const [historyVisits, setHistoryVisits] = useState(historyVisit);
 
+
     // Робимо запит на сервер.
     useEffect(() => {
+
         fetch('https://api.themoviedb.org/3/discover/movie', options)
-        .then(response => response.json())
-        .then(response => setFilmsData(sortRating(createNewData(response.results))))
-        .catch(err => console.error(err)); 
-
+            .then(response => response.json())
+            .then(response => response.results && setFilmsData(sortRating(createNewData(response.results))))
+            .catch(err => console.error(err));
+            
         fetch('https://api.themoviedb.org/3/person/popular', options)
-        .then(response => response.json())
-        .then(response => setStarsData(createNewDataStars(response.results)))
-        .catch(err => console.error(err));
-
+            .then(response => response.json())
+            .then(response => response.results && setStarsData(createNewDataStars(response.results)))
+            .catch(err => console.error(err));
     }, [])
 
 

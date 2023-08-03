@@ -16,11 +16,12 @@ export default function CinemaHall(){
     const { visitsInfo, callbackSetVisitsInfo } = useContext(Context);
 
     // Стан вільних місць.
-    const [seats, setSeats] = useState(createObjSeats());
+    const [seats, setSeats] = useState(createObjSeats(visitsInfo));
+
     // Очищення стану місць.
     useEffect(()=>{
         if(visitsInfo.numPlaces.length === 0){
-            setSeats(createObjSeats())
+            setSeats(createObjSeats(visitsInfo))
         }
 
     },[visitsInfo.numPlaces])
