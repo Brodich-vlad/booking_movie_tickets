@@ -8,6 +8,10 @@
     padding-top: 7rem;
     background: #050E12;
 }
+.wrapper{
+    min-height: 85vh;
+}
+
 .btn_top{
     width: 4rem;
     height: 4rem;

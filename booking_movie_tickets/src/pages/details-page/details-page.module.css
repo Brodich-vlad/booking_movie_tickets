@@ -142,13 +142,12 @@
         flex-direction: column;
     }
     .info_main_title {
-        font-family: 'Kalam';
         font-size: 3rem;
-
         line-height: 1.1;
-
     }
-
+    .info_text{
+        font-size: 1.6rem;
+    }
     .details_img_wrapper{
         width: 90%;
         margin-bottom: 2rem;
