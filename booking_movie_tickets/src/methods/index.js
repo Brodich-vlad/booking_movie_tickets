@@ -6,7 +6,7 @@ import { currentTime } from './current_time';
 import { searchObject } from './search_object';
 import { createNewData } from './create_new_data';
 import { createNewDataStars } from './create_new_data_stars';
-import { options } from './options';
+import { options, urlFilms, urlStars } from './options';
 import { createObjSeats } from './create_obj_seats'; 
 import { createDateStr, nextDate, createCalendar } from './calendar'; 
 import { sortRating } from './sort_rating';
@@ -21,11 +21,14 @@ export {
 	createNewData,
 	createNewDataStars,
 	options,
+	urlFilms,
+	urlStars,
 	createObjSeats,
 	createDateStr,
 	nextDate,
 	createCalendar,
-	sortRating
+	sortRating,
+	
 }
 
 

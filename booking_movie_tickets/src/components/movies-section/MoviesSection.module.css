@@ -1,7 +1,7 @@
 
 .movies_section{
     padding: 2rem;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 100%, rgba(0, 0, 0, 0.75)), url('../../image/background/phonoteka.jpg');
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.73) 100%, rgba(0, 0, 0, 0.73)), url('../../image/background/phonoteka.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;

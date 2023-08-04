@@ -15,7 +15,7 @@ const indexFre = ({date,time}) =>{
         return .4
     }
     else  if(time  > currentTime() && todey === date){
-        return .3
+        return .2
     }
     else return .1
 }

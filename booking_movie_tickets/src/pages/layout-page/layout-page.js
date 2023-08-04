@@ -6,7 +6,7 @@ import classes from './layout-page.module.css';
 
 import { useState , useEffect} from "react";
 
-import { createNewData, createNewDataStars, options, sortRating } from '../../methods';
+import { createNewData, createNewDataStars, options, sortRating, urlFilms, urlStars } from '../../methods';
 
 
 import { Context, visits, historyVisit } from '../../components/сontext';
@@ -24,16 +24,15 @@ export default function LayoutPage() {
     
     const [historyVisits, setHistoryVisits] = useState(historyVisit);
 
-
     // Робимо запит на сервер.
     useEffect(() => {
 
-        fetch('https://api.themoviedb.org/3/discover/movie', options)
+        fetch(urlFilms, options)
             .then(response => response.json())
             .then(response => response.results && setFilmsData(sortRating(createNewData(response.results))))
             .catch(err => console.error(err));
             
-        fetch('https://api.themoviedb.org/3/person/popular', options)
+        fetch(urlStars, options)
             .then(response => response.json())
             .then(response => response.results && setStarsData(createNewDataStars(response.results)))
             .catch(err => console.error(err));

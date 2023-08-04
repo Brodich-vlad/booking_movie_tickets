@@ -51,7 +51,7 @@ export default function DetailsPage(){
 
 
         return (
-            <div className={classes.details} style={{background: `linear-gradient(180deg, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, .8)), top center / cover fixed no-repeat url("${backdrop}")`}}>
+            <div className={classes.details} style={{background: `linear-gradient(180deg, rgba(0, 0, 0, 0.73) 20%, rgba(0, 0, 0, .73)), top center / cover fixed no-repeat url("${backdrop}")`}}>
                 <Link className={classes.details_btn_back} to={'..'}><>&#10094;</> Go back</Link>
                 <div  className={classes.details_wrapper}>
                     <div className={classes.details_img_wrapper} >
